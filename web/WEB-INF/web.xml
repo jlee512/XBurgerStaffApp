@@ -7,7 +7,25 @@
 
     <!--*****************************Servlet Mapping************************-->
 
+    <servlet>
+        <servlet-name>login_validation</servlet-name>
+        <servlet-class>main.java.servlet.LoginValidation</servlet-class>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>login_validation</servlet-name>
+        <url-pattern>/login_validation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registration</servlet-name>
+        <servlet-class>main.java.servlet.RegistrationUpdate</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>registration</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
 
     <!--*****************************JSP Mapping****************************-->
     <servlet>
@@ -19,6 +37,17 @@
         <servlet-name>index</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <jsp-file>/home.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
 
     <!--=======================================================================================================-->
     <!--Generic Mapping-->
