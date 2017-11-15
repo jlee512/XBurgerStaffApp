@@ -37,6 +37,16 @@
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>process_statistics</servlet-name>
+        <servlet-class>main.java.servlet.ProcessStats</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>process_statistics</servlet-name>
+        <url-pattern>/statistics</url-pattern>
+    </servlet-mapping>
+
     <!--*****************************JSP Mapping****************************-->
     <servlet>
         <servlet-name>index</servlet-name>
@@ -58,6 +68,15 @@
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>statisticsJSP</servlet-name>
+        <jsp-file>/statistics.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>statisticsJSP</servlet-name>
+        <url-pattern>/statistics_page</url-pattern>
+    </servlet-mapping>
 
     <!--=======================================================================================================-->
     <!--Generic Mapping-->
