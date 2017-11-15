@@ -29,7 +29,7 @@
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/stock">STOCK |</a>
+                <a class="nav-link" href="/restock">STOCK |</a>
 
             </li>
             <c:if test="${sessionScope.staff.staff_type == 'Manager'}">
@@ -40,7 +40,7 @@
             </c:if>
             <c:if test="${sessionScope.loginStatus == 'active'}">
                 <li class="nav-item">
-                    <a class="nav-link" href="/logout">| LOGOUT</a>
+                    <a class="nav-link" href="/logout">LOGOUT</a>
                 </li>
             </c:if>
         </ul>

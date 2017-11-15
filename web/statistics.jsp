@@ -28,6 +28,10 @@
 
 <body>
 
+<c:if test="${sessionScope.loginStatus ne 'active'}">
+    <jsp:forward page="/"/>
+</c:if>
+
 <!--======= Start Nav ==========-->
 <jsp:include page="navbarLogin.jsp"/>
 
@@ -91,7 +95,7 @@
                 <th style="width:20%;">Stock</th>
             </tr>
             <tr>
-                <c:forEach items="${rder_API.getLastMonthOfOrders()}" var="current">
+                <c:forEach items="${Order_API.getLastMonthOfOrders()}" var="current">
                 <c:if test="${ingredient.stock_level < 5}">
             <tr>
                 <td>${current.order_id_received}</td>

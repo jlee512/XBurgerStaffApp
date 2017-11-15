@@ -40,23 +40,33 @@
                     </div>
                 </div>
                 <div class="staff-button">
-                    <a href="/stock"><button type="button" class="btn btn-info btn-lg">MANAGE STOCK LEVELS</button></a>
+                    <a href="/restock"><button type="button" class="btn btn-info btn-lg">MANAGE STOCK LEVELS</button></a>
                     <div style="border: solid 2px #117a8b; margin-top: 5px; margin-bottom: 25px; color: #117a8b;">
-                        <strong>Ingredients Needing Restock:</strong>
-                        <c:forEach items="${low_stocks}" var="low_ingredient">
-                            <c:choose>
-                                <c:when test="${low_ingredient.stock_level < 2}">
-                                    <div style="color: #820d66;">
-                                            ${low_ingredient.ingredient_name} : ${low_ingredient.stock_level} remaining
-                                    </div>
-                                </c:when>
+
+                        <c:choose>
+                        <c:when test="${low_stocks == 'none'}" >
+                            <div style="color: #27a9f9;">
+                                <strong>All Stock Levels Healthy</strong>
+                            </div>
+                        </c:when>
                             <c:otherwise>
-                                <div>
-                                        ${low_ingredient.ingredient_name} : ${low_ingredient.stock_level} remaining
-                                </div>
+                                <strong>Ingredients Needing Restock:</strong>
+                                <c:forEach items="${low_stocks}" var="low_ingredient">
+                                    <c:choose>
+                                        <c:when test="${low_ingredient.stock_level < 2}">
+                                            <div style="color: #820d66;">
+                                                    ${low_ingredient.ingredient_name} : ${low_ingredient.stock_level} remaining
+                                            </div>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <div>
+                                                    ${low_ingredient.ingredient_name} : ${low_ingredient.stock_level} remaining
+                                            </div>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
                             </c:otherwise>
-                            </c:choose>
-                        </c:forEach>
+                        </c:choose>
                     </div>
                 </div>
                 <c:if test="${sessionScope.staff.staff_type == 'Manager'}">
