@@ -58,7 +58,7 @@
             <div class="card-body" style=" color: black;">
                 <h4><class = "card-title"><strong> New Order! ${order.order_id}</strong></h4>
                 <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
-                <p class="card-text"><strong>Time Placed: ${order.order_datetime}</strong></p>
+                <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                 <p class="card-text"><strong>Status: ${order.status} (new) </strong></p>
                     ${order.setPriceString()}
                 <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
@@ -98,7 +98,7 @@
         <div class="card-body">
             <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
             <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
-            <p class="card-text"><strong>Time Placed: ${order.order_datetime}</strong></p>
+            <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
             <p class="card-text"><strong>Status: ${order.status}</strong></p>
                 ${order.setPriceString()}
             <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
@@ -147,7 +147,7 @@
                 <div class="card-body">
                     <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
                     <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
-                    <p class="card-text"><strong>Time Placed: ${order.order_datetime}</strong></p>
+                    <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                     <p class="card-text"><strong>Status: ${order.status}</strong></p>
                         ${order.setPriceString()}
                     <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
@@ -195,7 +195,7 @@
                 <div class="card-body">
                     <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
                     <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
-                    <p class="card-text"><strong>Time Placed: ${order.order_datetime}</strong></p>
+                    <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                     <p class="card-text"><strong>Status: ${order.status}</strong></p>
                         ${order.setPriceString()}
                     <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
@@ -241,7 +241,7 @@
             <div class="card-body">
                 <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
                 <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
-                <p class="card-text"><strong>Time Placed: ${order.order_datetime}</strong></p>
+                <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                 <p class="card-text"><strong>Status: ${order.status}</strong></p>
                     ${order.setPriceString()}
                 <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
