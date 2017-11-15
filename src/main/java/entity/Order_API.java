@@ -727,8 +727,8 @@ public class Order_API {
 
 //        Order_API.addOrder(order, 21);
 
-        Order_API.assignStaffToOrder(1, );
-//        Order_API.completeOrder(251);
+//        Order_API.assignStaffToOrder(1, 291);
+//        Order_API.completeOrder(291);
 
 //        ArrayList<Order> test = Order_API.getOrdersByCustomerID(1);
 

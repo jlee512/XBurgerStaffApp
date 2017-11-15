@@ -14,15 +14,9 @@
     <meta charset="UTF-8">
     <title>Staff Login</title>
 
-    <link rel="stylesheet" href="/css/main.css" media="screen" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/loginstyle.css">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/fonts/font-awesome.min.css" rel="stylesheet">
-    <link rel="icon" href="" type="image/x-icon"> <!-- Add burger icon-->
+    <jsp:include page="headertags.jsp" />
+
 </head>
 <body>
 
@@ -80,12 +74,8 @@
 
 
 <!-- ============ Footer Section  ============= -->
+<jsp:include page="footertags.jsp" />
 
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script src="/jquery/jquery.min.js"></script>
-<script src="/js/bootstrap.bundle.min.js"></script>
-<script src="/js/loginjs.js"></script>
 
 </body>
 </html>
