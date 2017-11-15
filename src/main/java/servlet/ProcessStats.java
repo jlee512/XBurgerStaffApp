@@ -19,6 +19,9 @@ public class ProcessStats extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        System.out.println("test");
+
         ArrayList<Stock> allStock = Stock_API.getAllStockDetails();
         ArrayList<Order> monthOrder = Order_API.getLastMonthOfOrders();
 
