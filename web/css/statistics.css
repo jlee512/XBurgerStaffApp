@@ -23,6 +23,7 @@
 #stockTable tr {
     /* Add a bottom border to all table rows */
     border-bottom: 1px solid #ddd;
+    background-color: white;
 }
 
 #stockTable tr.header, #stockTable tr:hover {
