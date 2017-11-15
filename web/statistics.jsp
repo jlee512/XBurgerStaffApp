@@ -15,25 +15,99 @@
 <head>
     <title>Statistics</title>
 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <script type="text/javascript" src="/js/lib/dummy.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script><script src="http://d3js.org/d3.v2.js"></script>
-    <style type="text/css">
-    </style>
+    <meta charset="UTF-8">
 
-    <script type="" src="/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/statistics.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap">
+    <link rel="stylesheet" href="/css/loginstyle.css">
+
     <script type="text/javascript" src="js/stocktable.js"></script>
-
 
 </head>
 
 <body>
 
+<!--======= Start Nav ==========-->
+<jsp:include page="navbarLogin.jsp"/>
 
+<div class="container">
+
+    <!-- Stock Table -->
+
+    <div class="table-responsive col-lg-2 col-sm-3 col-xs-4" style="max-width: 30%; float:left; padding-top: 100px">
+        <h3>Stock Levels</h3>
+    <table id="stockTable" style="padding-top: 10px">
+        <input type="text" id="stockInput" onkeyup="stockFilter()" placeholder="Search..">
+        <tr class="header">
+            <th style="width:60%;">Ingredient Name</th>
+            <th style="width:20%;">Stock</th>
+            <th style="width:20%;">Price</th>
+        </tr>
+        <tr>
+        <c:forEach items="${all_stock}" var="ingredient">
+        <tr>
+            <td>${ingredient.ingredient_name}</td>
+            <td>${ingredient.stock_level}</td>
+            <td>${'$'}${ingredient.price}</td>
+        </tr>
+        </c:forEach>
+        </tr>
+    </table>
+    </div>
+
+
+    <!-- Low Stock Table -->
+    <div class="table-responsive col-lg-2 col-sm-3 col-xs-4" style="max-width: 30%; float:left; padding-top: 100px">
+        <h3>Low Stock!</h3>
+        <table id="stockTable">
+
+            <tr class="header">
+                <th style="width:60%;">Ingredient Name</th>
+                <th style="width:20%;">Stock</th>
+            </tr>
+            <tr>
+                <c:forEach items="${all_stock}" var="ingredient">
+                        <c:if test="${ingredient.stock_level < 5}">
+            <tr>
+                <td>${ingredient.ingredient_name}</td>
+                <td>${ingredient.stock_level}</td>
+            </tr>
+            </c:if>
+            </c:forEach>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <!-- Last Month Table -->
+    <div class="table-responsive col-lg-2 col-sm-3 col-xs-4" style="max-width: 30%; float:left; padding-top: 100px">
+        <h3>Low Stock!</h3>
+        <table id="stockTable">
+
+            <tr class="header">
+                <th style="width:60%;">Ingredient Name</th>
+                <th style="width:20%;">Stock</th>
+            </tr>
+            <tr>
+                <c:forEach items="${rder_API.getLastMonthOfOrders()}" var="current">
+                <c:if test="${ingredient.stock_level < 5}">
+            <tr>
+                <td>${current.order_id_received}</td>
+                <td>${current.order_id_received}</td>
+            </tr>
+            </c:if>
+            </c:forEach>
+            </tr>
+        </table>
+    </div>
+
+
+
+</div>
 
 </body>
+
+
 </html>

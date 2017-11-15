@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * Created by Julian on 7/11/2017.
  */
-public class Stock implements Serializable {
+public class Stock implements Serializable, Comparable<Stock> {
 
     int ingredient_id;
     String ingredient_name;
@@ -80,5 +80,10 @@ public class Stock implements Serializable {
 
     public void setImg_file_name(String img_file_name) {
         this.img_file_name = img_file_name;
+    }
+
+    @Override
+    public int compareTo(Stock o) {
+        return Integer.compare(this.stock_level, o.stock_level);
     }
 }
