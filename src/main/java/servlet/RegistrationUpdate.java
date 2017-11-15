@@ -48,6 +48,11 @@ public class RegistrationUpdate extends HttpServlet {
 
         Staff_API.addStafftoDBAPI(newStaff);
 
+        HttpSession session = request.getSession(true);
+        session.setMaxInactiveInterval(60 * 60 * 12);
+        session.setAttribute("loginStatus", "active");
+        session.setAttribute("staff", newStaff);
+
         response.sendRedirect("/home");
     }
 
