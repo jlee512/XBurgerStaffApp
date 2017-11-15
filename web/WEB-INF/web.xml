@@ -27,6 +27,16 @@
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>stock_table</servlet-name>
+        <servlet-class>main.java.servlet.StockTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>stock_table</servlet-name>
+        <url-pattern>/stock_counts</url-pattern>
+    </servlet-mapping>
+
+
     <!--*****************************JSP Mapping****************************-->
     <servlet>
         <servlet-name>index</servlet-name>
@@ -47,6 +57,18 @@
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>statistics</servlet-name>
+        <jsp-file>/testJack.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>statistics</servlet-name>
+        <url-pattern>/statistics</url-pattern>
+    </servlet-mapping>
+
+
 
 
     <!--=======================================================================================================-->
