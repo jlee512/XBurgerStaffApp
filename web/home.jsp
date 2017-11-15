@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Staff Home</title>
+    <jsp:include page="head"
 </head>
 <body>
 

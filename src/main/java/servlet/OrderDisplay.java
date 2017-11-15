@@ -30,10 +30,10 @@ public class OrderDisplay extends HttpServlet {
             }
 
             req.setAttribute("order_list", reverse_list);
-            req.getRequestDispatcher("/process_history").forward(req, resp);
+            req.getRequestDispatcher("/process_order").forward(req, resp);
         } else {
             req.setAttribute("no_orders", true);
-            req.getRequestDispatcher("/process_history").forward(req, resp);
+            req.getRequestDispatcher("/process_order").forward(req, resp);
         }
 
     }

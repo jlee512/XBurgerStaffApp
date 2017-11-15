@@ -34,7 +34,7 @@
 
     <servlet-mapping>
         <servlet-name>OrderDisplay</servlet-name>
-        <url-pattern>/history</url-pattern>
+        <url-pattern>/order</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -69,13 +69,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>orderHistory</servlet-name>
+        <servlet-name>OrderDisplayJSP</servlet-name>
         <jsp-file>/order_history.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>orderHistory</servlet-name>
-        <url-pattern>/process_history</url-pattern>
+        <servlet-name>OrderDisplayJSP</servlet-name>
+        <url-pattern>/process_order</url-pattern>
     </servlet-mapping>
 
     <servlet>
