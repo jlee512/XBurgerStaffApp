@@ -58,6 +58,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>update_order</servlet-name>
+        <servlet-class>main.java.servlet.UpdateStatus</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>update_order</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>home</servlet-name>
         <servlet-class>main.java.servlet.SetupHome</servlet-class>
     </servlet>
