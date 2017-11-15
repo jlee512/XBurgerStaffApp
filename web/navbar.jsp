@@ -21,11 +21,11 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/home">STAFF PORTAL |</a>
+                <a class="nav-link" href="/home">HOME |</a>
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/orders">ORDERS |</a>
+                <a class="nav-link" href="/order">ORDERS |</a>
 
             </li>
             <li class="nav-item">

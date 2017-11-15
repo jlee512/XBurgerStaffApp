@@ -28,6 +28,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>OrderDisplay</servlet-name>
+        <servlet-class>main.java.servlet.OrderDisplay</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderDisplay</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>logout</servlet-name>
         <servlet-class>main.java.servlet.Logout</servlet-class>
     </servlet>
@@ -47,6 +57,16 @@
         <url-pattern>/statistics</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <servlet-class>main.java.servlet.SetupHome</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
     <!--*****************************JSP Mapping****************************-->
     <servlet>
         <servlet-name>index</servlet-name>
@@ -59,13 +79,23 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>home</servlet-name>
+        <servlet-name>homeJSP</servlet-name>
         <jsp-file>/home.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>home</servlet-name>
-        <url-pattern>/home</url-pattern>
+        <servlet-name>homeJSP</servlet-name>
+        <url-pattern>/home_setup</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderDisplayJSP</servlet-name>
+        <jsp-file>/order_history.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderDisplayJSP</servlet-name>
+        <url-pattern>/process_order</url-pattern>
     </servlet-mapping>
 
     <servlet>
