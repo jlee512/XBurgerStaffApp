@@ -26,6 +26,16 @@
         <servlet-name>registration</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>OrderDisplay</servlet-name>
+        <servlet-class>main.java.servlet.OrderDisplay</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderDisplay</servlet-name>
+        <url-pattern>/history</url-pattern>
+    </servlet-mapping>
 
     <!--*****************************JSP Mapping****************************-->
     <servlet>
@@ -46,6 +56,16 @@
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>orderHistory</servlet-name>
+        <jsp-file>/order_history.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>orderHistory</servlet-name>
+        <url-pattern>/process_history</url-pattern>
     </servlet-mapping>
 
 
