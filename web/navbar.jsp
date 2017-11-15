@@ -25,18 +25,23 @@
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/order">Orders |</a>
+                <a class="nav-link" href="/order">ORDERS |</a>
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/stock">Stock |</a>
+                <a class="nav-link" href="/stock">STOCK |</a>
 
             </li>
             <c:if test="${sessionScope.staff.staff_type == 'Manager'}">
             <li class="nav-item">
-                <a class="nav-link" href="/Statistics">Stock |</a>
+                <a class="nav-link" href="/statistics">STATISTICS |</a>
 
             </li>
+            </c:if>
+            <c:if test="${sessionScope.loginStatus == 'active'}">
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">| LOGOUT</a>
+                </li>
             </c:if>
         </ul>
     </div>

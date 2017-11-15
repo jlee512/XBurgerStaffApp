@@ -10,7 +10,10 @@
 <html>
 <head>
     <title>Staff Home</title>
-    <jsp:include page="head"
+
+    <link rel="stylesheet" href="css/button_page_styles.css">
+
+    <jsp:include page="headertags.jsp"/>
 </head>
 <body>
 
@@ -22,6 +25,26 @@
 </c:if>
 
 
+<div class="button-container">
+
+    <div class="button element">
+        <div class="card">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary btn-lg">Order Processing</button>
+                <button type="button" class="btn btn-primary btn-lg">Stock Levels</button>
+                <c:if test="${sessionScope.staff.staff_type == 'Manager'}">
+                    <button type="button" class="btn btn-primary btn-lg">Monthly Reporting</button>
+                </c:if>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
 
 </body>
+
+<jsp:include page="footertags.jsp"/>
+
 </html>
