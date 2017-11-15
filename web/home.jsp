@@ -29,11 +29,21 @@
 
     <div class="button element">
         <div class="card">
-            <div class="card-body">
-                <button type="button" class="btn btn-primary btn-lg">Order Processing</button>
-                <button type="button" class="btn btn-primary btn-lg">Stock Levels</button>
+            <div class="card-body" style="text-align: center;">
+                <h2>Staff Console</h2>
+                <div class="staff-button">
+                    <a href="/order"><button type="button" class="btn btn-info btn-lg">PROCESS ORDERS</button></a>
+                </div>
+                <div>
+                    ${hello}
+                </div>
+                <div class="staff-button">
+                    <a href="/stock"><button type="button" class="btn btn-info btn-lg">MANAGE STOCK LEVELS</button></a>
+                </div>
                 <c:if test="${sessionScope.staff.staff_type == 'Manager'}">
-                    <button type="button" class="btn btn-primary btn-lg">Monthly Reporting</button>
+                    <div class="staff-button">
+                        <a href="/statistics"><button type="button" class="btn btn-info btn-lg">STATISTICS</button></a>
+                    </div>
                 </c:if>
             </div>
         </div>

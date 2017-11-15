@@ -67,6 +67,16 @@
         <url-pattern>/update</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <servlet-class>main.java.servlet.SetupHome</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
     <!--*****************************JSP Mapping****************************-->
     <servlet>
         <servlet-name>index</servlet-name>
@@ -79,13 +89,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>home</servlet-name>
+        <servlet-name>homeJSP</servlet-name>
         <jsp-file>/home.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>home</servlet-name>
-        <url-pattern>/home</url-pattern>
+        <servlet-name>homeJSP</servlet-name>
+        <url-pattern>/home_setup</url-pattern>
     </servlet-mapping>
 
     <servlet>

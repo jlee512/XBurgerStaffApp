@@ -422,7 +422,7 @@ public class Order_API {
                 //Process order_meta
                 int order_id_received = order_meta.get("Order_ID").getAsInt();
                 Staff staff = null;
-                Customer customer = null;
+                Customer customer = new Customer(order_meta.get("Customer_ID").getAsInt(), null, null, null, -1, null, null, null, null);
                 String datetimeString = order_meta.get("DateTime").getAsString();
                 int order_status_num = order_meta.get("Status").getAsInt();
                 String order_status = Status_Information.getStatus(order_status_num);
