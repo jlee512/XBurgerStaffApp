@@ -26,7 +26,7 @@
         <servlet-name>registration</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>OrderDisplay</servlet-name>
         <servlet-class>main.java.servlet.OrderDisplay</servlet-class>
@@ -36,6 +36,16 @@
         <servlet-name>OrderDisplay</servlet-name>
         <url-pattern>/history</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>stock_table</servlet-name>
+        <servlet-class>main.java.servlet.StockTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>stock_table</servlet-name>
+        <url-pattern>/stock_counts</url-pattern>
+    </servlet-mapping>
+
 
     <!--*****************************JSP Mapping****************************-->
     <servlet>
@@ -67,6 +77,18 @@
         <servlet-name>orderHistory</servlet-name>
         <url-pattern>/process_history</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>statistics</servlet-name>
+        <jsp-file>/testJack.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>statistics</servlet-name>
+        <url-pattern>/statistics</url-pattern>
+    </servlet-mapping>
+
+
 
 
     <!--=======================================================================================================-->
