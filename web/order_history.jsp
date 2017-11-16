@@ -97,7 +97,7 @@
         <a href="/update?order_id=${order.order_id}">
         <div class="card-body">
             <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-            <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+            <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
             <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
             <p class="card-text"><strong>Status: ${order.status}</strong></p>
                 ${order.setPriceString()}
@@ -146,7 +146,7 @@
                 <div class="card-body">
                     <a href="/update?order_id=${order.order_id}">
                     <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-                    <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+                    <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
                     <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                     <p class="card-text"><strong>Status: ${order.status}</strong></p>
                         ${order.setPriceString()}
@@ -194,7 +194,7 @@
             <div class="card" style="background-color: #acf8ff; border-style: solid; border-width: 5px; border-color: #6cdde7; margin: 5px ">
                 <div class="card-body">
                     <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-                    <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+                    <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
                     <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                     <p class="card-text"><strong>Status: ${order.status}</strong></p>
                         ${order.setPriceString()}
@@ -240,7 +240,7 @@
             <div class="card-body">
                 <a href="/update?order_id=${order.order_id}">
                 <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-                <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+                <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
                 <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                 <p class="card-text"><strong>Status: ${order.status}</strong></p>
                     ${order.setPriceString()}
