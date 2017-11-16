@@ -36,7 +36,7 @@
                 <div class="staff-button">
                     <a href="/order"><button type="button" class="btn btn-info btn-lg" style="width: 100%;">PROCESS ORDERS</button></a>
                     <div style="border: solid 2px #117a8b; margin-top: 5px; margin-bottom: 25px; color: #117a8b;">
-                        ${order_count} orders to make
+                        ${order_count} unassigned orders
                     </div>
                 </div>
                 <div class="staff-button">

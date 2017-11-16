@@ -15,6 +15,7 @@ public class Stock implements Serializable, Comparable<Stock> {
     int stock_level;
     double price;
     String img_file_name;
+    int used_this_month;
 
     public Stock(int ingredient_id, String ingredient_name, String category, int stock_level, double price, String img_file_name) {
         this.ingredient_id = ingredient_id;
@@ -54,6 +55,10 @@ public class Stock implements Serializable, Comparable<Stock> {
         return price;
     }
 
+    public int getUsed_this_month() {
+        return used_this_month;
+    }
+
     public String getImg_file_name() {
         return img_file_name;
     }
@@ -82,8 +87,20 @@ public class Stock implements Serializable, Comparable<Stock> {
         this.img_file_name = img_file_name;
     }
 
+    public void setUsed_this_month(int used_this_month) {
+        this.used_this_month = used_this_month;
+    }
+
     @Override
     public int compareTo(Stock o) {
         return Integer.compare(this.stock_level, o.stock_level);
+    }
+
+    public void incrementUsed_this_month(){
+        this.used_this_month++;
+    }
+
+    public void setupUsed_this_month() {
+        this.used_this_month = 0;
     }
 }

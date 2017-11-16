@@ -31,61 +31,65 @@
 <!--======= Start Nav ==========-->
 <jsp:include page="navbarLogin.jsp"/>
 
-<div class="container">
+<div class="container d-flex flex-row justify-content-around">
 
     <!-- Stock Table -->
 
-    <div class="table-responsive col-lg-2 col-sm-3 col-xs-4" style="max-width: 30%; float:left; padding-top: 100px">
+    <div class="d-flex flex-column" style="max-width: 30%; float:left; padding-top: 100px">
         <h3 style="color: blueviolet; text-decoration: underline">Stock Levels</h3>
-    <table id="stockTable" style="padding-top: 10px">
-        <input type="text" id="stockInput" onkeyup="stockFilter()" placeholder="Search..">
-        <tr class="header">
-            <th style="width:60%;">Ingredient Name</th>
-            <th style="width:20%;">Stock</th>
-            <th style="width:20%;">Price</th>
-        </tr>
-        <tr>
-        <c:forEach items="${all_stock}" var="ingredient">
-        <tr>
-            <td>${ingredient.ingredient_name}</td>
-            <td>${ingredient.stock_level}</td>
-            <td>${'$'}${ingredient.price}${'0'}</td>
-        </tr>
-        </c:forEach>
+        <input type="text" id="stockInput" onkeyup="stockFilter()" placeholder="Search.." style="margin: 10px;">
+        <div class="d-flex flex-row justify-content-center">
+            <table id="stockTable" style="padding-top: 10px">
+                <tr class="header">
+                    <th style="width:60%;">Ingredient Name</th>
+                    <th style="width:20%;">Stock</th>
+                    <th style="width:20%;">Used This Month</th>
+                </tr>
+                <tr>
+                    <c:forEach items="${all_stock}" var="ingredient">
+                <tr>
+                    <td>${ingredient.ingredient_name}</td>
+                    <td>${ingredient.stock_level}</td>
+                    <td>${ingredient.used_this_month}</td>
+                </tr>
+                </c:forEach>
 
-    </table>
+            </table>
+
+
+        </div>
     </div>
 
+    <div class="d-flex flex-column" style="max-width: 30%; float:left; padding-top: 100px">
+        <h3 style="color: blueviolet; text-decoration: underline">Item Purchasing Trends</h3>
+        <div class="d-flex flex-row justify-content-center">
+            <table id="itemTable" style="padding-top: 10px">
+                <tr class="header">
+                    <th style="width:60%;">Item Type</th>
+                    <th style="width:20%;">Bought This Month</th>
+                </tr>
+                <tr>
+                    <c:forEach items="${item_names}" var="name" varStatus="loop">
+                <tr>
+                    <td>${name}</td>
+                    <td><c:out value="${item_counts[loop.index]}" /></td>
+                </tr>
+                </c:forEach>
 
-    <!-- Low Stock Table -->
-    <div class="table-responsive col-lg-2 col-sm-3 col-xs-4" style="max-width: 30%; float:left; padding-top: 100px">
-        <h3 style="color: blueviolet;text-decoration: underline">Low Stock!</h3>
-        <table id="stockTable">
+            </table>
 
-            <tr class="header">
-                <th style="width:60%;">Ingredient Name</th>
-                <th style="width:20%;">Stock</th>
-            </tr>
-            <tr>
-                <c:forEach items="${all_stock}" var="ingredient">
-                        <c:if test="${ingredient.stock_level < 5}">
-            <tr>
-                <td>${ingredient.ingredient_name}</td>
-                <td>${ingredient.stock_level}</td>
-            </tr>
 
-            </c:if>
-            </c:forEach>
-            </tr>
-        </table>
+        </div>
     </div>
 
 
     <!-- Chart -->
-    <div class="table-responsive col-lg-2 col-sm-3 col-xs-4" style="max-width: 30%; float:left; padding-top: 100px">
+    <div class="d-flex flex-row justify-content-center" style="max-width: 30%; float:left; padding-top: 100px">
         <h3 style="color: blueviolet; text-decoration: underline">Chart</h3>
 
     </div>
+
+</div>
 
 </div>
 
