@@ -25,6 +25,7 @@ public class UpdateStatus extends HttpServlet{
 //        System.out.println(order_id);
         int order_id_integer = Integer.parseInt(order_id);
         Order thisOrder = Order_API.getOrderDetailsByOrderIDCustomerAPI(order_id_integer);
+        System.out.println("Method called update status");
 
         String status = thisOrder.getStatus();
 
@@ -53,7 +54,7 @@ public class UpdateStatus extends HttpServlet{
             }
         }
 
-        req.getRequestDispatcher("/order").forward(req, resp);
+        resp.sendRedirect("/order");
     }
 
 }
