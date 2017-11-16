@@ -53,10 +53,10 @@
     <div class="col-sm-6, col-md-4, col-lg-3">
         <c:choose>
         <c:when test="${param['order']=='completed' && outerloop.index == 0 && order.status == 'Pending'}">
-            <a href="/update?order_id=${order.order_id}">
         <div class="card" style="background-color: #bd90b7; border-style: solid; border-width: 5px; border-color: #ab58a0 ">
+            <a href="/update?order_id=${order.order_id}">
             <div class="card-body" style=" color: black;">
-                <h4><class = "card-title"><strong> New Order! ${order.order_id}</strong></h4>
+                <h4 class = "card-title"><strong> New Order! ${order.order_id}</strong></h4>
                 <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
                 <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                 <p class="card-text"><strong>Status: ${order.status} (new) </strong></p>
@@ -88,16 +88,16 @@
                     </c:forEach>
                 </div>
             </div>
-        </div>
             </a>
+        </div>
     </div>
     </c:when>
     <c:when test="${order.status == 'Pending'}">
     <div class="card" style="background-color: #d0adbc; border-style: solid; border-width: 5px; border-color: #98506f; margin: 5px">
         <a href="/update?order_id=${order.order_id}">
         <div class="card-body">
-            <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-            <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+            <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
+            <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
             <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
             <p class="card-text"><strong>Status: ${order.status}</strong></p>
                 ${order.setPriceString()}
@@ -143,10 +143,10 @@
     <c:choose>
         <c:when test="${order.status == 'Making'}">
             <div class="card" style="background-color: #96b4ed; border-style: solid; border-width: 5px; border-color: #6b99ec; margin: 5px">
-            <a href="/update?order_id=${order.order_id}">
                 <div class="card-body">
-                    <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-                    <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+                    <a href="/update?order_id=${order.order_id}">
+                    <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
+                    <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
                     <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                     <p class="card-text"><strong>Status: ${order.status}</strong></p>
                         ${order.setPriceString()}
@@ -193,8 +193,8 @@
         <c:when test="${order.status == 'Completed'}">
             <div class="card" style="background-color: #acf8ff; border-style: solid; border-width: 5px; border-color: #6cdde7; margin: 5px ">
                 <div class="card-body">
-                    <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-                    <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+                    <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
+                    <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
                     <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                     <p class="card-text"><strong>Status: ${order.status}</strong></p>
                         ${order.setPriceString()}
@@ -237,10 +237,10 @@
 <c:forEach items="${insufficient_list}" var="order" varStatus="outerloop">
     <div class="col-sm-6, col-md-4, col-lg-3">
         <div class="card" style="background-color: lightcoral; border-style: solid; border-width: 5px; border-color: red; margin: 5px ">
-            <a href="/update?order_id=${order.order_id}">
             <div class="card-body">
-                <h4><class = "card-title"><strong>Order ${order.order_id}</strong></h4>
-                <p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>
+                <a href="/update?order_id=${order.order_id}">
+                <h4 class = "card-title"><strong>Order ${order.order_id}</strong></h4>
+                <%--<p class="card-text"><strong>Customer ID: ${order.customer.customer_id}</strong></p>--%>
                 <p class="card-text"><strong>Time: ${order.convertTime(order.order_datetime)}</strong></p>
                 <p class="card-text"><strong>Status: ${order.status}</strong></p>
                     ${order.setPriceString()}

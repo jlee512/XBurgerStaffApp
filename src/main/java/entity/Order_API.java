@@ -515,10 +515,16 @@ public class Order_API {
                 JsonObject order_meta = order_json.get("order_details_list").getAsJsonObject();
                 //Process order_meta
                 int order_id_received = order_meta.get("Order_ID").getAsInt();
-                Staff staff = null;
                 Customer customer = null;
                 String datetimeString = order_meta.get("DateTime").getAsString();
                 int order_status_num = order_meta.get("Status").getAsInt();
+                Staff staff = null;
+                System.out.println(order_status_num);
+                if (order_status_num != 0 && order_status_num != 3) {
+                    System.out.println("test");
+                    int staff_id = order_meta.get("Staff_ID").getAsInt();
+                    staff = new Staff(staff_id, "", "", -1, "", "");
+                }
                 String order_status_output = Status_Information.getStatus(order_status_num);
 
 
