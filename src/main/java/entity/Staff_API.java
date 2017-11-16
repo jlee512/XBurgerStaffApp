@@ -53,6 +53,8 @@ public class Staff_API {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }  catch (NumberFormatException e) {
+            return null;
         }
 
         return null;
