@@ -53,11 +53,11 @@ public class LoginValidation extends HttpServlet {
             } else {
                 response.addHeader("loginStatus", "incorrectPassword");
                 response.addHeader("username", username_entry);
-                response.sendRedirect("/");
+                response.sendRedirect("/login");
             }
         } else {
                 response.addHeader("loginStatus", "invalidUsername");
-                response.sendRedirect("/");
+                response.sendRedirect("/login");
         }
 
         out.flush();

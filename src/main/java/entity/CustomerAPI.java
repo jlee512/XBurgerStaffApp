@@ -36,17 +36,20 @@ public class CustomerAPI {
 
 
             //Extract customer data from JSON
-            int customer_id = customer_object.get("Customer_ID").getAsInt();
-            String username = customer_object.get("Username").getAsString();
-            String email = customer_object.get("Email").getAsString();
-            String phone_number =  customer_object.get("Phone_Number").getAsString();
-            int iterations = customer_object.get("Iterations").getAsInt();
-            String salt = customer_object.get("Salt").getAsString();
-            String passHash = customer_object.get("PassHash").getAsString();
-            String passPin = customer_object.get("PassPin").getAsString();
-            String cardToken = customer_object.get("Card_Token").getAsString();
+            if (customer_object.get("Customer_ID") != null) {
 
-            return new Customer(customer_id, username, email, phone_number, iterations, salt, passHash, passPin, cardToken);
+                int customer_id = customer_object.get("Customer_ID").getAsInt();
+                String username = customer_object.get("Username").getAsString();
+                String email = customer_object.get("Email").getAsString();
+                String phone_number = customer_object.get("Phone_Number").getAsString();
+                int iterations = customer_object.get("Iterations").getAsInt();
+                String salt = customer_object.get("Salt").getAsString();
+                String passHash = customer_object.get("PassHash").getAsString();
+                String passPin = customer_object.get("PassPin").getAsString();
+                String cardToken = customer_object.get("Card_Token").getAsString();
+
+                return new Customer(customer_id, username, email, phone_number, iterations, salt, passHash, passPin, cardToken);
+            }
 
         } catch (MalformedURLException e) {
             //Not expected to be realised based on api_base_url setup

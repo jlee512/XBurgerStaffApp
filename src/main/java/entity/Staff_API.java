@@ -37,14 +37,16 @@ public class Staff_API {
 
 
             //Extract customer data from JSON
-            int staff_id = staff_object.get("Staff_ID").getAsInt();
-            String staff_type = staff_object.get("Staff_Type").getAsString();
-            String username = staff_object.get("Username").getAsString();
-            int iterations = staff_object.get("Iterations").getAsInt();
-            String salt = staff_object.get("Salt").getAsString();
-            String passHash = staff_object.get("PassHash").getAsString();
+            if (staff_object.get("Staff_ID") != null) {
+                int staff_id = staff_object.get("Staff_ID").getAsInt();
+                String staff_type = staff_object.get("Staff_Type").getAsString();
+                String username = staff_object.get("Username").getAsString();
+                int iterations = staff_object.get("Iterations").getAsInt();
+                String salt = staff_object.get("Salt").getAsString();
+                String passHash = staff_object.get("PassHash").getAsString();
 
-            return new Staff(staff_id, staff_type, username, iterations, salt, passHash);
+                return new Staff(staff_id, staff_type, username, iterations, salt, passHash);
+            }
 
         } catch (MalformedURLException e) {
             //Not expected to be realised based on api_base_url setup

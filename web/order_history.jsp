@@ -63,10 +63,10 @@
                     ${order.setPriceString()}
                 <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
 
-                <a class="btn btn-info" data-toggle="collapse" href="#${outerloop.index}" aria-expanded="false" aria-controls="${outerloop.index}">
+                <a class="btn btn-info" data-toggle="collapse" href="#${order.order_id}" aria-expanded="false" aria-controls="${outerloop.index}">
                     Ingredients
                 </a>
-                <div class="collapse" id="${outerloop.index}">
+                <div class="collapse" id="${order.order_id}">
                     <c:forEach items="${order.items}" var="item" varStatus="innerloop">
                         <div style="border-style: solid; border-width: 5px; border-color: #ab58a0 ">
                             <c:choose>
@@ -103,10 +103,10 @@
                 ${order.setPriceString()}
             <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
 
-            <a class="btn btn-info" data-toggle="collapse" href="#${outerloop.index}" aria-expanded="false" aria-controls="${outerloop.index}">
+            <a class="btn btn-info" data-toggle="collapse" href="#${order.order_id}" aria-expanded="false" aria-controls="${outerloop.index}">
                 Ingredients
             </a>
-            <div class="collapse" id="${outerloop.index}">
+            <div class="collapse" id="${order.order_id}">
                 <c:forEach items="${order.items}" var="item" varStatus="innerloop">
                     <div  style="border-style: solid; border-width: 5px; border-color: #98506f ">
                         <c:choose>
@@ -152,10 +152,10 @@
                         ${order.setPriceString()}
                     <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
 
-                    <a class="btn btn-info" data-toggle="collapse" href="#${outerloop.index}" aria-expanded="false" aria-controls="${outerloop.index}">
+                    <a class="btn btn-info" data-toggle="collapse" href="#${order.order_id}" aria-expanded="false" aria-controls="${outerloop.index}">
                         Ingredients
                     </a>
-                    <div class="collapse" id="${outerloop.index}">
+                    <div class="collapse" id="${order.order_id}">
                         <c:forEach items="${order.items}" var="item" varStatus="innerloop">
                             <div  style="border-style: solid; border-width: 5px; border-color: #6b99ec ">
                                 <c:choose>
@@ -200,10 +200,10 @@
                         ${order.setPriceString()}
                     <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
 
-                    <a class="btn btn-info" data-toggle="collapse" href="#${outerloop.index}" aria-expanded="false" aria-controls="${outerloop.index}">
+                    <a class="btn btn-info" data-toggle="collapse" href="#${order.order_id}" aria-expanded="false" aria-controls="${outerloop.index}">
                         Ingredients
                     </a>
-                    <div class="collapse" id="${outerloop.index}">
+                    <div class="collapse" id="${order.order_id}">
                         <c:forEach items="${order.items}" var="item" varStatus="innerloop">
                             <div  style="border-style: solid; border-width: 5px; border-color: #6cdde7 ">
                                 <c:choose>
@@ -246,10 +246,10 @@
                     ${order.setPriceString()}
                 <p class="card-text"><strong>Price: ${order.priceString}</strong></p>
 
-                <a class="btn btn-info" data-toggle="collapse" href="#${outerloop.index}" aria-expanded="false" aria-controls="${outerloop.index}">
+                <a class="btn btn-info" data-toggle="collapse" href="#${order.order_id}" aria-expanded="false" aria-controls="${outerloop.index}">
                     Ingredients
                 </a>
-                <div class="collapse" id="${outerloop.index}">
+                <div class="collapse" id="${order.order_id}">
                     <c:forEach items="${order.items}" var="item" varStatus="innerloop">
                         <div  style="border-style: solid; border-width: 5px; border-color: red ">
                             <c:choose>
