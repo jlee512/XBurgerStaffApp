@@ -118,6 +118,36 @@
         <url-pattern>/statistics_page</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>restockJSP</servlet-name>
+        <jsp-file>/update_stock.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>restockJSP</servlet-name>
+        <url-pattern>/restock_page</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>restockSetup</servlet-name>
+        <servlet-class>main.java.servlet.RestockServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>restockSetup</servlet-name>
+        <url-pattern>/restock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>restockIngredient</servlet-name>
+        <servlet-class>main.java.servlet.RestockSpecificIngredient</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>restockIngredient</servlet-name>
+        <url-pattern>/update_stock</url-pattern>
+    </servlet-mapping>
+
     <!--=======================================================================================================-->
     <!--Generic Mapping-->
 

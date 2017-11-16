@@ -312,6 +312,7 @@ public class Stock_API {
 
             //Convert JSON object to access data
             JsonParser jp = new JsonParser(); //json parser from gson library
+
             JsonArray stock_array = jp.parse(new InputStreamReader((InputStream) request.getContent())).getAsJsonArray();
 
             for (int i = 0; i < stock_array.size(); i++) {
@@ -339,8 +340,10 @@ public class Stock_API {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+            //Not a json array, catch and return empty arraylist
+        } catch (IllegalStateException e) {
+            return null;
         }
-
         return null;
     }
 
